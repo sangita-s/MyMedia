@@ -1,0 +1,12 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.lyeng.developers.mymedia.SeeMovie"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.lyeng.developers.mymedia.SeeMovie.MovieRatingView
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingBottom="40dp" />
+
+</FrameLayout>

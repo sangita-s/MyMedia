@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SeeMovie.SeeMovieActivity">
+
+    <ImageView
+        android:id="@+id/img_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_live_tv_"
+        app:layout_constraintEnd_toStartOf="@+id/tv_movie_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_movie_medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_movie_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_medium"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Netflix" />
+
+    <ImageView
+        android:id="@+id/img_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_pixel_size"
+        app:layout_constraintBottom_toTopOf="@+id/img_genre"
+        app:layout_constraintEnd_toStartOf="@+id/tv_movie_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_medium" />
+
+    <TextView
+        android:id="@+id/tv_movie_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/img_lang"
+        app:layout_constraintStart_toEndOf="@+id/img_size"
+        app:layout_constraintTop_toBottomOf="@+id/tv_movie_medium"
+        tools:text="800MB" />
+
+    <ImageView
+        android:id="@+id/img_lang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_language"
+        app:layout_constraintBottom_toTopOf="@+id/tv_movie_genre"
+        app:layout_constraintEnd_toStartOf="@+id/tv_movie_language"
+        app:layout_constraintStart_toEndOf="@+id/tv_movie_size"
+        app:layout_constraintTop_toBottomOf="@+id/tv_movie_medium" />
+
+    <TextView
+        android:id="@+id/tv_movie_language"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_movie_genre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_lang"
+        app:layout_constraintTop_toBottomOf="@+id/tv_movie_medium"
+        tools:text="English" />
+
+    <ImageView
+        android:id="@+id/img_genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_type"
+        app:layout_constraintBottom_toTopOf="@+id/img_runtime"
+        app:layout_constraintEnd_toStartOf="@+id/tv_movie_genre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_size" />
+
+    <TextView
+        android:id="@+id/tv_movie_genre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_movie_runtime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_genre"
+        app:layout_constraintTop_toBottomOf="@+id/tv_movie_language"
+        tools:text="Thriller, Mystery" />
+
+    <ImageView
+        android:id="@+id/img_runtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_access_time"
+        app:layout_constraintEnd_toStartOf="@+id/tv_movie_runtime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_genre" />
+
+    <TextView
+        android:id="@+id/tv_movie_runtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/img_quality"
+        app:layout_constraintStart_toEndOf="@+id/img_runtime"
+        app:layout_constraintTop_toBottomOf="@+id/tv_movie_genre"
+        tools:text="120 minutes" />
+
+    <ImageView
+        android:id="@+id/img_quality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_high_quality"
+        app:layout_constraintEnd_toStartOf="@+id/tv_movie_quality"
+        app:layout_constraintStart_toEndOf="@+id/tv_movie_runtime"
+        app:layout_constraintTop_toBottomOf="@+id/tv_movie_genre" />
+
+    <TextView
+        android:id="@+id/tv_movie_quality"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_quality"
+        app:layout_constraintTop_toBottomOf="@+id/tv_movie_genre"
+        tools:text="1080P" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Rating: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_runtime" />
+
+    <com.lyeng.developers.mymedia.SeeMovie.MovieRatingView
+        android:id="@+id/movieRatingBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:outLineColor="#00FCFAFA"
+        app:shape="square" />
+</android.support.constraint.ConstraintLayout>

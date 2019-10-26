@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddMovie.AddMovieActivity">
+
+    <android.support.design.chip.ChipGroup
+        android:id="@+id/cg_add_movie_seen_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:focusedByDefault="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:singleSelection="true">
+
+        <android.support.design.chip.Chip
+            android:id="@+id/filter_saw_chip"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saw"
+            app:rippleColor="@color/colorAccent" />
+
+        <android.support.design.chip.Chip
+            android:id="@+id/filter_wts_chip2"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Want To See"
+            app:rippleColor="@color/colorAccent" />
+
+    </android.support.design.chip.ChipGroup>
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/tv_add_movie_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Movie Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cg_add_movie_seen_status" />
+
+    <TextView
+        android:id="@+id/on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="on :"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_add_movie_name" />
+
+    <android.support.design.chip.ChipGroup
+        android:id="@+id/cg_add_movie_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/on"
+        app:singleSelection="true">
+
+    </android.support.design.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/ondate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="on :"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cg_add_movie_medium" />
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/tv_add_movie_date"
+        android:layout_width="122dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:hint="Date"
+        app:layout_constraintBottom_toBottomOf="@+id/ondate"
+        app:layout_constraintStart_toEndOf="@+id/ondate"
+        app:layout_constraintTop_toTopOf="@+id/ondate"
+        app:layout_constraintVertical_bias="0.347"></android.support.design.widget.TextInputEditText>
+
+    <ImageButton
+        android:id="@+id/btn_dt_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_access_time"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_add_movie_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/tv_add_movie_date"
+        app:layout_constraintTop_toTopOf="@+id/tv_add_movie_date"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/tv_add_movie_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:hint="Size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ondate" />
+
+    <Spinner
+        android:id="@+id/lang_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:entries="@array/mov_lang"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.735"
+        app:layout_constraintStart_toEndOf="@+id/tv_add_movie_size"
+        app:layout_constraintTop_toBottomOf="@+id/btn_dt_choose"></Spinner>
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/tv_add_movie_quality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="Quality"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_add_movie_size" />
+
+    <TextView
+        android:id="@+id/rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="Rating: "
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cg_add_movie_genre" />
+
+    <com.lyeng.developers.mymedia.SeeMovie.MovieRatingView
+        android:id="@+id/cv_add_movie_rating"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/rating"
+        app:layout_constraintTop_toBottomOf="@+id/rating"
+        app:outLineColor="#00FFFFFF"
+        app:shape="square" />
+
+    <TextView
+        android:id="@+id/genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="Genre: "
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_add_movie_quality" />
+
+    <android.support.design.chip.ChipGroup
+        android:id="@+id/cg_add_movie_genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genre">
+
+    </android.support.design.chip.ChipGroup>
+
+
+    <android.support.design.chip.Chip
+        android:id="@+id/chip_save"
+        style="@style/Widget.MaterialComponents.Chip.Action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        app:chipBackgroundColor="@android:color/holo_green_light"
+        app:chipIcon="@drawable/ic_save"
+        app:layout_constraintEnd_toStartOf="@+id/chip_cancel"
+        app:layout_constraintHorizontal_bias="0.314"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_add_movie_rating" />
+
+    <android.support.design.chip.Chip
+        android:id="@+id/chip_cancel"
+        style="@style/Widget.MaterialComponents.Chip.Action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:chipBackgroundColor="@android:color/holo_red_light"
+        app:chipIcon="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/chip_save"
+        app:layout_constraintTop_toTopOf="@+id/chip_save" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_add_movie_quality"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.641"
+        app:layout_constraintStart_toEndOf="@+id/tv_add_movie_quality"
+        app:layout_constraintTop_toTopOf="@+id/tv_add_movie_quality">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/tv_add_movie_runtime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter runtime minutes" />
+    </android.support.design.widget.TextInputLayout>
+</android.support.constraint.ConstraintLayout>
